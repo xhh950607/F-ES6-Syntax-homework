@@ -4,7 +4,7 @@ const parseData = ({ data, column }) => {
     const keys = column.map(col => col.name);
 
     // TODO 对知识点掌握点挺不错的
-    // TODO 一般遍历内参数不实用复数（values）
+    // TODO 一般遍历内参数不使用复数命名（values）
     return data.map(values => {
         const entries = keys.map((key, index) => ({ [key]: values[index] }));
         return Object.assign(...entries);
